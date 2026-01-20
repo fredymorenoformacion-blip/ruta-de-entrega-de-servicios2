@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Video - SSFF</title>
+
+    <style>
+        /* ============================================
+           ESTILOS GENERALES
+           ============================================ */
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f2f2f2;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* ============================================
+           🔵 BANNER SUPERIOR
+           ============================================ */
+
+        .banner {
+            width: 100%;
+            background: #ffffff;
+            padding: 25px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .banner img {
+            width:190px;
+            height: auto;
+        }
+
+        /* ============================================
+           🔵 CONTENEDOR DEL VIDEO (16:9 REAL)
+           ============================================ */
+
+        .video-container {
+            width: 90%;
+            max-width: 800px;
+            background: #ffffff;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .title {
+            text-align: center;
+            font-size: 40px;
+            margin-top: 0px;
+            margin-bottom: 15px;
+        }
+
+        /* Contenedor que mantiene 16:9 */
+        .video-wrapper {
+            width: 100%;
+            aspect-ratio: 16 / 8.5; /*  AQUI SE LOGRA EL EFECTO 16:9 */
+            background: #000000;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* El video se adapta al contenedor */
+        .video-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ajusta perfectamente */
+            border-radius: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 10px;
+            color: #000000;
+            font-size: 18px;
+            font-weight:400;
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============================================================
+         BANNER SUPERIOR CON ICONO
+       ============================================================ -->
+    <div class="banner">
+        <img src="assets/icono1.png" alt="Icono del Banner">
+    </div>
+
+    <div class="video-container">
+ <!-- //////////////////////////////////////////// TITULO DEL VIDEO  ///////////////////////////////// -->
+
+
+        <h1 class="title">      CALIBRACION OPM     </h1>
+
+        <!-- ============================================================
+             CONTENEDOR 16:9 PARA EL VIDEO
+           ============================================================ -->
+        <div class="video-wrapper">
+
+            <!-- ============================================================
+                 🔻 AQUI VA TU VIDEO
+                 Cambia "videos/miVideo.mp4" por tu archivo
+               ============================================================ -->
+            <video controls controlsList="nodownload" >
+                <source src="videos/video.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+
+        </div>
+
+        <div class="footer">
+<!-- ////////////////////////////////////////////  PIE DE PAGINA  //////////////////////////////////// -->
+
+            “¡Mide con precisión, calibra con decisión!
+Un Power Meter sin calibrar es como navegar sin brújula: ¡pierdes el rumbo de la potencia óptica!
+Calibra hoy y asegura la calidad de tu red.”
+
+
+        </div>
+    </div>
+
+</body>
+</html>
